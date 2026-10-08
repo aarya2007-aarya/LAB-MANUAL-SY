@@ -1,0 +1,12 @@
+import re
+
+text = input("Enter a paragraph: ")
+
+pattern = r'https?://[^\s]+'
+
+urls = re.findall(pattern, text)
+
+print("\nExtracted URLs:")
+
+for url in urls:
+    print(url)
